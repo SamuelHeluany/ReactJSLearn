@@ -1,6 +1,7 @@
 import './App.css'
 
 import night from './assets/night.jpg'
+import CarDetails from './componnents/CarDetails'
 import ConditionalRender from './componnents/ConditionalRender'
 
 import Data from './componnents/data'
@@ -22,6 +23,7 @@ function App() {
       <ListRender />
       <ConditionalRender />
       <ShowUserName name='Samuel'/>
+      <CarDetails brand='Hyundai' km={50000} color='Cinza'/>
     </>
   )
 }
