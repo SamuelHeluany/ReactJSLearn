@@ -1,10 +1,19 @@
 
 const ConditionalRender = () => {
-    const x = 5;
+    const x = 3;
   return (
     <div>
         <h3>Está aparecendo?</h3>
-        {x > 2 && <h1>VERDADEIRO</h1>}
+        {x > 2 ? 
+        (<div>
+          <p>O numero é maior que 2</p>
+        </div>
+
+        ) : (
+
+        <div>
+          <p>O numero é menor que 2</p>
+        </div>)}
     </div>
   )
 }
