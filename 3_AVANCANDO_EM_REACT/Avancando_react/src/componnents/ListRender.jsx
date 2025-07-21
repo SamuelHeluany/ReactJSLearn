@@ -11,6 +11,18 @@ const ListRender = () => {
 
         ]
     )
+    // Função criada para deletar um usuário aleatório da lista acima
+    const deleteRandomUser = () => {
+        // criou um numero randomico entre 0 e 3
+        const randomNumber = Math.floor(Math.random() * 4)
+        // usa o setUsers onde passa o previous State (normalmente)
+        // coloca prev + nome do conteudo da lista
+        // filtra por usuário (percorre todos os usuários) e o numero
+        // randomico gerado tem q ser diferente do id
+        setUsers((prevUsers) => 
+            prevUsers.filter((user) => randomNumber !== user.id)
+        )
+    }
 
   return <div>
 
@@ -28,6 +40,7 @@ const ListRender = () => {
                 </li>
             ))}
         </ul>
+        <button onClick={deleteRandomUser}>Delete random user</button>
     </div>
 
 }
