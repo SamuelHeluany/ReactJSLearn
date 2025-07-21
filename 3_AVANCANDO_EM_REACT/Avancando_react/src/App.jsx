@@ -6,6 +6,7 @@ import ConditionalRender from './componnents/ConditionalRender'
 import Data from './componnents/data'
 
 import ListRender from './componnents/ListRender'
+import ShowUserName from './componnents/ShowUserName'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       
       <ListRender />
       <ConditionalRender />
+      <ShowUserName name='Samuel'/>
     </>
   )
 }
