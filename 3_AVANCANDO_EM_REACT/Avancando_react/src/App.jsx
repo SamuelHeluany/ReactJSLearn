@@ -1,6 +1,7 @@
 import './App.css'
 
 import night from './assets/night.jpg'
+import ConditionalRender from './componnents/ConditionalRender'
 
 import Data from './componnents/data'
 
@@ -18,6 +19,7 @@ function App() {
       <Data />
       
       <ListRender />
+      <ConditionalRender />
     </>
   )
 }
