@@ -9,6 +9,7 @@ import Data from './componnents/data'
 
 import ListRender from './componnents/ListRender'
 import ShowUserName from './componnents/ShowUserName'
+import Container from './componnents/Container'
 
 // Renderização de lista com componente
 const cars = [
@@ -36,6 +37,15 @@ function App() {
       {cars.map((car) => (
         <CarDetails key={car.id} brand={car.brand} color={car.color} km={car.km} />
       ))}
+      <Container>
+        <p>teste do componente</p>
+      </Container>
+      <Container>
+        <div>
+          <h3>teste</h3>
+          <p>oi</p>
+        </div>
+      </Container>
     </>
   )
 }
