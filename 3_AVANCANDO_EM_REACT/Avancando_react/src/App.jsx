@@ -10,6 +10,7 @@ import Data from './componnents/data'
 import ListRender from './componnents/ListRender'
 import ShowUserName from './componnents/ShowUserName'
 import Container from './componnents/Container'
+import ExecuteFunction from './componnents/ExecuteFunction'
 
 // Renderização de lista com componente
 const cars = [
@@ -19,6 +20,10 @@ const cars = [
 ]
 
 function App() {
+
+  function showMessage() {
+    alert('Mensagem')
+  }
 
   return (
     <>
@@ -46,6 +51,7 @@ function App() {
           <p>oi</p>
         </div>
       </Container>
+      <ExecuteFunction myFunction={showMessage}/>
     </>
   )
 }
