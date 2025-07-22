@@ -11,6 +11,9 @@ import ListRender from './componnents/ListRender'
 import ShowUserName from './componnents/ShowUserName'
 import Container from './componnents/Container'
 import ExecuteFunction from './componnents/ExecuteFunction'
+import { useState } from 'react'
+import Message from './componnents/Message'
+import ChangeMessage from './componnents/ChangeMessage'
 
 // Renderização de lista com componente
 const cars = [
@@ -21,8 +24,15 @@ const cars = [
 
 function App() {
 
+  // função para dar um alert no componente ExecuteFunction
   function showMessage() {
     alert('Mensagem')
+  }
+
+  const [message, setMessage] = useState('')
+
+  const handleMessage = (msg) => {
+    setMessage(msg)
   }
 
   return (
@@ -52,6 +62,8 @@ function App() {
         </div>
       </Container>
       <ExecuteFunction myFunction={showMessage}/>
+      <Message msg={message}/>
+      <ChangeMessage handleMessage={handleMessage} />
     </>
   )
 }
