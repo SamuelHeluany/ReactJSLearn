@@ -9,6 +9,13 @@ import Data from './componnents/data'
 import ListRender from './componnents/ListRender'
 import ShowUserName from './componnents/ShowUserName'
 
+// Renderização de lista com componente
+const cars = [
+  {id: 1, brand: 'Ferrari', color: 'azul', km: 0},
+  {id: 2, brand: 'Audi', color: 'amarelo', km: 220},
+  {id: 3, brand: 'Lamborguini', color: 'laranja', km: 110},
+]
+
 function App() {
 
   return (
@@ -24,6 +31,10 @@ function App() {
       <ConditionalRender />
       <ShowUserName name='Samuel'/>
       <CarDetails brand='Hyundai' km={50000} color='Cinza'/>
+      {/* reaproveitamento com loop (map) */}
+      {cars.map((car) => (
+        <CarDetails key={car.id} brand={car.brand} color={car.color} km={car.km} />
+      ))}
     </>
   )
 }
