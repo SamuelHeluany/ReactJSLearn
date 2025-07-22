@@ -1,3 +1,4 @@
+import Fragment from './componnents/Fragment'
 import './App.css'
 
 import night from './assets/night.jpg'
@@ -26,7 +27,7 @@ function App() {
       {/* inserindo via assets após importação (via templateexpresion) */}
       <img src={night} alt="" />
       <Data />
-      
+      <Fragment />
       <ListRender />
       <ConditionalRender />
       <ShowUserName name='Samuel'/>
