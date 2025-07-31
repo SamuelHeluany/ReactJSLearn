@@ -9,10 +9,14 @@ const MyForm = () => {
     const handleName = (e) => {
         setName(e.target.value)
     }
-    console.log(email)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(name, email)
+    }
   return (
     <div>
-        <form>
+        <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Nome:</label>
                 <input type="text" name='name' placeholder='Digite seu nome' onChange={handleName}/>
@@ -20,9 +24,8 @@ const MyForm = () => {
 
             <label>
                 <span>Email:</span>
-                <input type="email" name="email" placeholder='Digite o email' onChange={(e) => {
-                    setEmail(e.target.value)
-                }}/>
+                <input type="email" name="email" placeholder='Digite o email' 
+                onChange={(e) => setEmail(e.target.value)}/>
             </label>
             <input type="submit" value="Enviar" />
         </form>
