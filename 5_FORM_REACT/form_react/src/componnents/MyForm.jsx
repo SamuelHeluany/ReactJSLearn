@@ -12,7 +12,6 @@ const MyForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(name, email)
     }
   return (
     <div>
